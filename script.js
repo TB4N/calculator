@@ -66,7 +66,7 @@ function addValue(value) {
             expression.lastIndexOf('+'),
             expression.lastIndexOf('-'),
             expression.lastIndexOf('*'),
-            expression.lastIndexOf('/'),
+            expression.lastIndexOf('/')
         );
         if (lastDecimalIndex < lastDecimalIndex || lastDecimalIndex < lastnumberIndex || lastDecimalIndex === -1 && (expression === '' || expression.slice(lastnumberIndex + 1).indexOf('-') === -1)
         ) {
@@ -135,7 +135,7 @@ function percentage() {
     }
 }
 
-function decimal() {
+function decimal(value) {
     if (!expression.endsWith('.') && !isNaN(expression.slice(-1))) {
         addValue(value);
     }
